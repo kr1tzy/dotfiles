@@ -1,1 +1,1 @@
-/home/noah/.vimrc
+../../.vimrc
