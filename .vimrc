@@ -13,6 +13,7 @@ Plugin 'airblade/vim-gitgutter'		        " Git gutter
 Plugin 'kien/ctrlp.vim'				" Ctrl+P
 Plugin 'bling/vim-airline'			" Status bar 
 Plugin 'klen/python-mode'                       " Python IDE
+Plugin 'mxw/vim-jsx'						" React / JSX syntax
 
 call vundle#end()
 filetype plugin indent on
