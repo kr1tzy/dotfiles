@@ -15,6 +15,7 @@ Plugin 'bling/vim-airline'            " Status bar
 Plugin 'klen/python-mode'             " Python IDE
 Plugin 'maxmellon/vim-jsx-pretty'     " React / JSX syntax
 Plugin 'moll/vim-node'								" Node.js syntax / tools
+Plugin 'morhetz/gruvbox'              " Color scheme
 
 call vundle#end()
 filetype plugin indent on
