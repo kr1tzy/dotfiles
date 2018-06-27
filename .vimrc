@@ -8,24 +8,27 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'         " Vundle 
 Plugin 'scrooloose/nerdtree'          " NERDTree
 Plugin 'scrooloose/nerdcommenter'     " NERDCommenter
-Plugin 'tpope/vim-fugitive'           " Awesome git wrapper
 Plugin 'airblade/vim-gitgutter'       " Git gutter
 Plugin 'kien/ctrlp.vim'               " Ctrl+P
 Plugin 'bling/vim-airline'            " Status bar 
-Plugin 'klen/python-mode'             " Python IDE
-Plugin 'maxmellon/vim-jsx-pretty'     " React / JSX syntax
-Plugin 'moll/vim-node'								" Node.js syntax / tools
+Plugin 'klen/python-mode'							" Python IDE
 Plugin 'morhetz/gruvbox'              " Color scheme
 
 call vundle#end()
 filetype plugin indent on
 
+""" Color scheme
+set t_Co=256
+set background=dark							
+let g:gruvbox_contrast_dark='hard'		
+colorscheme gruvbox
+highlight Normal ctermbg=None         
+
 """ Other settings
-command! CP execute "CtrlP"
-set smarttab                          " insert spaces (or tabs) to go to the next indent
-set shiftwidth=2                      " shift width
-set tabstop=2                         " tabstop
+command! CP execute "CtrlP"						" :CP
+set smarttab                          " insert spaces or tabs
+set sw=2                              " shift width
+set ts=2                              " tabstop
 set number                            " line numbers
-set showcmd                           " shows command in status bar
-let g:vim_jsx_pretty_colorful_config = 1
+set showcmd                           " cmd in status
 let mapleader=","											" custom vim leader
