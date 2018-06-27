@@ -14,7 +14,7 @@ Plugin 'kien/ctrlp.vim'               " Ctrl+P
 Plugin 'bling/vim-airline'            " Status bar 
 Plugin 'klen/python-mode'             " Python IDE
 Plugin 'maxmellon/vim-jsx-pretty'     " React / JSX syntax
-
+Plugin 'moll/vim-node'								" Node.js syntax / tools
 
 call vundle#end()
 filetype plugin indent on
