@@ -12,17 +12,17 @@ Plugin 'airblade/vim-gitgutter'       " Git gutter
 Plugin 'kien/ctrlp.vim'               " Ctrl+P
 Plugin 'bling/vim-airline'            " Status bar 
 Plugin 'klen/python-mode'							" Python IDE
+Plugin 'pangloss/vim-javascript'			" JavaScript 
 Plugin 'morhetz/gruvbox'              " Color scheme
 
 call vundle#end()
 filetype plugin indent on
 
 """ Color scheme
-set t_Co=256
 set background=dark							
-let g:gruvbox_contrast_dark='hard'		
+let g:gruvbox_contrast_dark='Hard'
 colorscheme gruvbox
-highlight Normal ctermbg=None         
+" highlight Normal ctermbg=None         
 
 """ Other settings
 command! CP execute "CtrlP"						" :CP
@@ -32,3 +32,4 @@ set ts=2                              " tabstop
 set number                            " line numbers
 set showcmd                           " cmd in status
 let mapleader=","											" custom vim leader
+let g:NERDTreeWinSize=20              " nerdtree size
