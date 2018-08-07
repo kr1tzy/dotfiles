@@ -36,6 +36,7 @@ let g:airline_powerline_fonts = 1     			" font for airline
 let g:NERDTreeFileExtensionHighlightFullName = 1	" highlighting
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1		" folder icons
 let g:DevIconsEnableFoldersOpenClose = 1		" open / close
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 
 """ Color scheme
 colorscheme dracula
