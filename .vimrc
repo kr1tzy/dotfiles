@@ -42,5 +42,7 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 colorscheme dracula
 let g:dracula_italic = 0
 set t_Co=256
-hi Normal ctermbg=NONE
+hi Normal ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=246
+
+
