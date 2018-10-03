@@ -12,8 +12,7 @@ Plugin 'airblade/vim-gitgutter'       " Git gutter
 Plugin 'ryanoasis/vim-devicons'       " Icons for NERD tree
 Plugin 'kien/ctrlp.vim'               " Ctrl+P
 Plugin 'bling/vim-airline'            " Status bar 
-Plugin 'klen/python-mode'	      			" Python IDE
-Plugin 'scrooloose/syntastic'					" Syntax
+Plugin 'scrooloose/syntastic'					" Syntax Check
 Plugin 'pangloss/vim-javascript'      " JavaScript 
 Plugin 'dracula/vim'		      				" Dracula theme
 
