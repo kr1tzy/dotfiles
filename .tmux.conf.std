@@ -4,8 +4,8 @@ set-option -g prefix C-z
 bind-key C-z send-prefix
 
 # Turn on mouse interactions
-set -g mode-mouse on
-setw -g mode-mouse on
+set -g mouse on
+setw -g mouse on
 
 # Automatically set window title
 set-window-option -g automatic-rename on
@@ -24,7 +24,7 @@ bind k select-pane -U
 bind l select-pane -R
 
 # Enable mouse control (clickable windows, panes, resizable panes)
-set-option -g mode-mouse on
+set-option -g mouse on
 
 # No delay for escape key press
 set -sg escape-time 0
@@ -36,7 +36,7 @@ set -sg escape-time 0
 ## The panes {
 set -g pane-active-border-fg colour82
 set -g window-style 'bg=default'
-set -g window-active-style 'bg=black'
+set -g window-active-style 'bg=default'
 ## }
 
 # The status bar {
