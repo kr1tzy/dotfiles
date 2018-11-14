@@ -2,10 +2,19 @@
 
 ### Resources
 * .vimrc
-	* has Vundle along with several plugins I like to use
+	* Vundle
+	* NERDCommenter
+	* Git gutter
+	* Numbers
+	* Ctrl+P
+	* Vim-airline
+	* Syntastic
+	* Dracula theme
 * .tmux.conf
+	* tpm
+	* tmux-resurrect
 	* .tmux.conf.std is for tmux version > 1.8
-	* .tmux.conf.1.8 is for 1.8
+	* .tmux.conf.1.8 is obviously for 1.8
 * .radare2rc
 	* customizes colors & number of bytes displayed in disassembly
 

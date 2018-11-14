@@ -25,6 +25,7 @@ set number                            " line numbers
 set showcmd                           " cmd in status
 let mapleader="," 		      					" custom vim leader
 set encoding=utf8		      						" encoding for icons
+filetype plugin on										" for nerd commenter
 syntax on				     									" colors
 
 """ Color scheme
