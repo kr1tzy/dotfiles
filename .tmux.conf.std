@@ -34,7 +34,7 @@ set -sg escape-time 0
 ######################
 
 ## The panes {
-set -g pane-active-border-fg colour82
+set -g pane-active-border-fg colour30
 set -g window-style 'bg=default'
 set -g window-active-style 'bg=default'
 ## }
@@ -49,7 +49,7 @@ set -g status-position bottom
 set -g status-bg default
 set -g status-left ' '
 set -g status-right ' '
-set -g status-right '#[fg=colour12,bold,bright] %A, %d %b %Y %I:%M %p '
+set -g status-right '#[fg=colour30,bold,bright] %A, %d %b %Y %I:%M %p '
 
 # Left
 setw -g window-status-current-fg colour14
