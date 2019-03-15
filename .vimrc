@@ -5,6 +5,11 @@ filetype off                                    " Vundle requirement
 
 call vundle#begin()
 
+Plugin 'VundleVim/Vundle'                       " Vundle requirement
+filetype off                                    " Vundle requirement
+
+call vundle#begin()
+
 Plugin 'VundleVim/Vundle.vim'                   " Vundle 
 Plugin 'scrooloose/nerdcommenter'               " NERDCommenter
 Plugin 'scrooloose/nerdtree'                    " NERDTree
@@ -21,10 +26,13 @@ Plugin 'vim-airline/vim-airline-themes'         " Airline schemes
 call vundle#end()
 
 """ Nerd tree
-map <C-n> :NERDTreeToggle<CR>
+map <C-x> :NERDTreeToggle<CR>
+nnoremap <C-a> <C-w>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+set mouse=a
+let g:NERDTreeMouseMode=3
 
 """ Other settings
 command! CP execute "CtrlP"                      " :CP
