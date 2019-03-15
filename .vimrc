@@ -45,6 +45,8 @@ let mapleader=","                                " custom vim leader
 set encoding=utf8                                " encoding for icons
 filetype plugin on                               " for nerd commenter
 let g:pymode_virtualenv = 1                      " Searches for virtualenv
+set mouse=n                                      " Sets the mouse 
+set ttymouse=xterm2                              " Vim windows adjusted with mouse
 
 """ Color scheme
 syntax on
