@@ -48,6 +48,8 @@ let g:pymode_virtualenv = 1                      " Searches for virtualenv
 set mouse=a                                      " Sets the mouse 
 set ttymouse=xterm2                              " Vim windows adjusted with mouse
 set clipboard=unnamed                            " Mac clipboard
+set backspace=indent,eol,start                   " Backspace
+
 
 
 """ Color scheme
