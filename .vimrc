@@ -31,8 +31,8 @@ nnoremap <C-a> <C-w>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-set mouse=a
-let g:NERDTreeMouseMode=3
+"set mouse=a
+"let g:NERDTreeMouseMode=3
 
 """ Other settings
 command! CP execute "CtrlP"                      " :CP
@@ -44,6 +44,7 @@ set showcmd                                      " cmd in status
 let mapleader=","                                " custom vim leader
 set encoding=utf8                                " encoding for icons
 filetype plugin on                               " for nerd commenter
+let g:pymode_virtualenv = 1                      " Searches for virtualenv
 
 """ Color scheme
 syntax on
