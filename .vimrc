@@ -17,10 +17,9 @@ Plugin 'airblade/vim-gitgutter'                 " Git gutter
 Plugin 'myusuf3/numbers.vim'                    " Numbers
 Plugin 'kien/ctrlp.vim'                         " Ctrl+P
 Plugin 'bling/vim-airline'                      " Status bar 
-Plugin 'scrooloose/syntastic'                   " Syntax
-Plugin 'klen/python-mode'                       " Python IDE
 Plugin 'flazz/vim-colorschemes'                 " All the colorschemes
 Plugin 'vim-airline/vim-airline-themes'         " Airline schemes
+Plugin 'w0rp/ale'                               " Linter
 
 
 call vundle#end()
@@ -48,6 +47,14 @@ let g:pymode_virtualenv = 1                      " Searches for virtualenv
 set mouse=a                                      " Sets the mouse 
 set ttymouse=xterm2                              " Vim windows adjusted with mouse
 set clipboard=unnamed                            " Mac clipboard
+
+""" ALE config
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_enter = 0
+let g:ale_fixers = {'javascript': ['prettier'], 'python': ['autopep8', 'add_blank_lines_for_python_control_statements', 'trim_whitespace', 'remove_trailing_lines']}
+let g:ale_linters = {'javascript': ['eslint'], 'python': ['pylint', 'flake8']}
 
 
 """ Color scheme
