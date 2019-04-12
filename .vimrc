@@ -13,6 +13,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'                   " Vundle 
 Plugin 'scrooloose/nerdcommenter'               " NERDCommenter
 Plugin 'scrooloose/nerdtree'                    " NERDTree
+Plugin 'ryanoasis/vim-devicons'                 " Dev icons
 Plugin 'airblade/vim-gitgutter'                 " Git gutter
 Plugin 'myusuf3/numbers.vim'                    " Numbers
 Plugin 'kien/ctrlp.vim'                         " Ctrl+P
