@@ -57,10 +57,11 @@ set mouse=a                                      " Sets the mouse
 set ttymouse=xterm2                              " Vim windows adjusted with mouse
 set clipboard=unnamed                            " Mac clipboard
 set backspace=indent,eol,start                   " Backspace
-let g:nerdtree_tabs_open_on_console_startup=2
+let g:nerdtree_tabs_open_on_console_startup=2    " NERDTree w/ same state in new tab
 
 """ Auto-commands
 let g:neoformat_try_formatprg = 1
+" Prettier wired in to Neoformat
 augroup NeoformatAutoFormat
     autocmd!
     autocmd FileType javascript,javascript.jsx setlocal formatprg=prettier\
@@ -77,4 +78,3 @@ set t_Co=256
 colorscheme darkglass
 hi Normal ctermbg=NONE
 hi Normal guibg=NONE
-
