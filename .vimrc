@@ -1,32 +1,33 @@
 """ Vundle Settings
-set rtp+=~/.vim/bundle/Vundle.vim               " Runtime path
-set nocompatible                                " Not compatible w/ Vi
-filetype off                                    " Vundle requirement
+set rtp+=~/.vim/bundle/Vundle.vim                " Runtime path
+set nocompatible                                 " Not compatible w/ Vi
+filetype off                                     " Vundle requirement
 
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle'                       " Vundle requirement
-filetype off                                    " Vundle requirement
+Plugin 'VundleVim/Vundle'                        " Vundle requirement
+filetype off                                     " Vundle requirement
 
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'                   " Vundle
-Plugin 'scrooloose/nerdcommenter'               " NERDCommenter
-Plugin 'scrooloose/nerdtree'                    " NERDTree
-Plugin 'Xuyuanp/nerdtree-git-plugin'            " NERDTree Git plugin
-Plugin 'jistr/vim-nerdtree-tabs'                " NERDTree tabs
-Plugin 'ryanoasis/vim-devicons'                 " Dev icons
-Plugin 'airblade/vim-gitgutter'                 " Git gutter
-Plugin 'myusuf3/numbers.vim'                    " Numbers
-Plugin 'kien/ctrlp.vim'                         " Ctrl+P
-Plugin 'bling/vim-airline'                      " Status bar
-Plugin 'flazz/vim-colorschemes'                 " All the colorschemes
-Plugin 'vim-airline/vim-airline-themes'         " Airline schemes
-Plugin 'pangloss/vim-javascript'                " JS syntax highlighting
-Plugin 'leshill/vim-json'                       " JSON syntax highlighting
-Plugin 'mxw/vim-jsx'                            " JSX syntax highlighting
-Plugin 'skywind3000/asyncrun.vim'               " Asynchronous shell commands
-Plugin 'sbdchd/neoformat'                       " Code formatter
+Plugin 'VundleVim/Vundle.vim'                    " Vundle
+Plugin 'scrooloose/nerdcommenter'                " NERDCommenter
+Plugin 'scrooloose/nerdtree'                     " NERDTree
+Plugin 'Xuyuanp/nerdtree-git-plugin'             " NERDTree Git plugin
+Plugin 'jistr/vim-nerdtree-tabs'                 " NERDTree tabs
+Plugin 'ryanoasis/vim-devicons'                  " NERDTree Dev icons
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " NERDTree Dev icons colors
+Plugin 'airblade/vim-gitgutter'                  " Git gutter
+Plugin 'myusuf3/numbers.vim'                     " Numbers
+Plugin 'kien/ctrlp.vim'                          " Ctrl+P
+Plugin 'bling/vim-airline'                       " Status bar
+Plugin 'flazz/vim-colorschemes'                  " All the colorschemes
+Plugin 'vim-airline/vim-airline-themes'          " Airline schemes
+Plugin 'pangloss/vim-javascript'                 " JS syntax highlighting
+Plugin 'leshill/vim-json'                        " JSON syntax highlighting
+Plugin 'mxw/vim-jsx'                             " JSX syntax highlighting
+Plugin 'skywind3000/asyncrun.vim'                " Asynchronous shell commands
+Plugin 'sbdchd/neoformat'                        " Code formatter
 
 call vundle#end()
 
@@ -34,10 +35,12 @@ call vundle#end()
 map <C-x> :NERDTreeToggle<CR>
 nnoremap <C-a> <C-w>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-set mouse=a
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
 let g:NERDTreeMouseMode=3
+set mouse=a
 
 """ Other settings
 command! CP execute "CtrlP"                      " :CP
