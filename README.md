@@ -31,7 +31,7 @@
 * .tmux.std.conf 
 	* tpm
 	* tmux-resurrect
-	* > 1.8
+	* \> 1.8
 * .tmux.1.8.conf 
 	* <= 1.8
 * .tmux.conf == .tmux.std.conf
