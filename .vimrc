@@ -39,6 +39,7 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
+let NERDTreeShowHidden=1
 let g:NERDTreeMouseMode=3
 set mouse=a
 
