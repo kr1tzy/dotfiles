@@ -1,6 +1,6 @@
 """ Vundle Settings
 set rtp+=~/.vim/bundle/Vundle.vim               " Runtime path
-set nocompatible                                " Vundle requirement
+set nocompatible                                " Not compatible w/ Vi
 filetype off                                    " Vundle requirement
 
 call vundle#begin()
@@ -10,18 +10,23 @@ filetype off                                    " Vundle requirement
 
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'                   " Vundle 
+Plugin 'VundleVim/Vundle.vim'                   " Vundle
 Plugin 'scrooloose/nerdcommenter'               " NERDCommenter
 Plugin 'scrooloose/nerdtree'                    " NERDTree
+Plugin 'Xuyuanp/nerdtree-git-plugin'            " NERDTree Git plugin
+Plugin 'jistr/vim-nerdtree-tabs'                " NERDTree tabs
 Plugin 'ryanoasis/vim-devicons'                 " Dev icons
 Plugin 'airblade/vim-gitgutter'                 " Git gutter
 Plugin 'myusuf3/numbers.vim'                    " Numbers
 Plugin 'kien/ctrlp.vim'                         " Ctrl+P
-Plugin 'bling/vim-airline'                      " Status bar 
+Plugin 'bling/vim-airline'                      " Status bar
 Plugin 'flazz/vim-colorschemes'                 " All the colorschemes
 Plugin 'vim-airline/vim-airline-themes'         " Airline schemes
-Plugin 'w0rp/ale'                               " Linter
-
+Plugin 'pangloss/vim-javascript'                " JS syntax highlighting
+Plugin 'leshill/vim-json'                       " JSON syntax highlighting
+Plugin 'mxw/vim-jsx'                            " JSX syntax highlighting
+Plugin 'skywind3000/asyncrun.vim'               " Asynchronous shell commands
+Plugin 'sbdchd/neoformat'                       " Code formatter
 
 call vundle#end()
 
@@ -31,8 +36,8 @@ nnoremap <C-a> <C-w>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-"set mouse=a
-"let g:NERDTreeMouseMode=3
+set mouse=a
+let g:NERDTreeMouseMode=3
 
 """ Other settings
 command! CP execute "CtrlP"                      " :CP
@@ -45,20 +50,23 @@ let mapleader=","                                " custom vim leader
 set encoding=utf8                                " encoding for icons
 filetype plugin on                               " for nerd commenter
 let g:pymode_virtualenv = 1                      " Searches for virtualenv
-set mouse=a                                      " Sets the mouse 
+set mouse=a                                      " Sets the mouse
 set ttymouse=xterm2                              " Vim windows adjusted with mouse
 set clipboard=unnamed                            " Mac clipboard
 set backspace=indent,eol,start                   " Backspace
+let g:nerdtree_tabs_open_on_console_startup=2
 
-
-""" ALE config
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-let g:ale_fix_on_save = 1
-let g:ale_lint_on_enter = 0
-let g:ale_fixers = {'javascript': ['prettier'], 'python': ['autopep8', 'add_blank_lines_for_python_control_statements', 'trim_whitespace', 'remove_trailing_lines']}
-let g:ale_linters = {'javascript': ['eslint'], 'python': ['pylint', 'flake8']}
-
+""" Auto-commands
+let g:neoformat_try_formatprg = 1
+augroup NeoformatAutoFormat
+    autocmd!
+    autocmd FileType javascript,javascript.jsx setlocal formatprg=prettier\
+                                                            \--stdin\
+                                                            \--print-width\ 80\
+                                                            \--single-quote\
+                                                            \--trailing-comma\ es6
+    autocmd BufWritePre *.js,*.jsx Neoformat
+augroup END
 
 """ Color scheme
 syntax on
@@ -66,3 +74,4 @@ set t_Co=256
 colorscheme darkglass
 hi Normal ctermbg=NONE
 hi Normal guibg=NONE
+
