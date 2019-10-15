@@ -93,17 +93,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export HOMEBREW_GITHUB_API_TOKEN=42a17e0f9dff1170836d535a63822d60c155f7d6
-export PATH="/usr/local/sbin:$PATH"
-
-# Created by `userpath` on 2019-08-01 19:10:55
-export PATH="$PATH:/Users/kritz/.local/bin"
-export PYENV_ROOT="/Users/kritz/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-export PATH="/usr/local/Cellar/pyenv-virtualenv/1.1.3/shims:${PATH}"
-export PYENV_VIRTUALENV_INIT=1
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PATH="$HOME/.cargo/bin:$PATH"
