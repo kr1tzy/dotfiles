@@ -23,25 +23,16 @@ Plugin 'kien/ctrlp.vim'                          " Ctrl+P
 Plugin 'bling/vim-airline'                       " Status bar
 Plugin 'flazz/vim-colorschemes'                  " All the colorschemes
 Plugin 'vim-airline/vim-airline-themes'          " Airline schemes
-Plugin 'pangloss/vim-javascript'                 " JS syntax highlighting
-Plugin 'leshill/vim-json'                        " JSON syntax highlighting
-Plugin 'mxw/vim-jsx'                             " JSX syntax highlighting
-Plugin 'skywind3000/asyncrun.vim'                " Asynchronous shell commands
-Plugin 'sbdchd/neoformat'                        " Code formatter
 
 call vundle#end()
 
 """ Nerd tree
-map <C-x> :NERDTreeToggle<CR>
-nnoremap <C-a> <C-w>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let NERDTreeShowHidden=1
 let g:NERDTreeMouseMode=3
-set mouse=a
 
 """ Other settings
 command! CP execute "CtrlP"                      " :CP
@@ -60,22 +51,9 @@ set clipboard=unnamed                            " Mac clipboard
 set backspace=indent,eol,start                   " Backspace
 let g:nerdtree_tabs_open_on_console_startup=2    " NERDTree w/ same state in new tab
 
-""" Auto-commands
-let g:neoformat_try_formatprg = 1
-" Prettier wired in to Neoformat
-augroup NeoformatAutoFormat
-    autocmd!
-    autocmd FileType javascript,javascript.jsx setlocal formatprg=prettier\
-                                                            \--stdin\
-                                                            \--print-width\ 80\
-                                                            \--single-quote\
-                                                            \--trailing-comma\ es6
-    autocmd BufWritePre *.js,*.jsx Neoformat
-augroup END
-
 """ Color scheme
 syntax on
 set t_Co=256
-colorscheme darkglass
+colorscheme mopkai
 hi Normal ctermbg=NONE
 hi Normal guibg=NONE
