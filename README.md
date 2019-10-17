@@ -1,6 +1,6 @@
 # Dotfiles
 
-> Updates the below resources. Make sure to comment out or update the install script if you don't want yours to get blown away or lost. Also, my .zshrc assumes pyenv & pyenv-virtualenv are installed so adjust that accordingly.
+> Updates the below resources. Make sure to comment out or update the install script if you don't want yours to get blown away or lost. Also, my .zshrc assumes [pyenv & pyenv-virtualenv] are installed so adjust that accordingly.
 
 ### Resources
 * .vimrc
@@ -30,3 +30,5 @@
 ```bash
 git clone https://github.com/kr1tzb1tz/dotfiles.git && cd dotfiles && ./install.sh
 ```
+
+[pyenv & pyenv-virtualenv]: https://realpython.com/intro-to-pyenv/
