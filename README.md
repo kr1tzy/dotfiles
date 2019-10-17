@@ -1,5 +1,7 @@
 # Dotfiles
 
+> Updates the below resources. Make sure to comment out or update the install script if you don't want yours to get blown away or lost. Also, my .zshrc assumes pyenv & pyenv-virtualenv are installed so adjust that accordingly.
+
 ### Resources
 * .vimrc
 	* Vundle
@@ -24,5 +26,7 @@
 	* tmux-resurrect
 
 ### To install
-1. clone repo
-2. cd dot-files && ./install.sh
+
+```bash
+git clone https://github.com/kr1tzb1tz/dotfiles.git && cd dotfiles && ./install.sh
+```
