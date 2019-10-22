@@ -1,6 +1,6 @@
 # Dotfiles
 
-> Updates the below resources. Make sure to comment out or update the install script if you don't want yours to get blown away or lost. Also, my .zshrc assumes [pyenv & pyenv-virtualenv] are installed so adjust that accordingly.
+> Updates the below resources and installs Vundle (a vim package manager), tpm (tmux package manager), and pyenv & pyenv-virtualenv if they aren't already installed.
 
 ### Resources
 * .vimrc
@@ -16,12 +16,13 @@
 	* Syntax highlighting
 	* Backspace
 	* Tabs & spaces set
-	* No plugins
+	* NO PLUGINS
 * .radare2rc
 	* colors & number of bytes displayed in disassembly
 * .zshrc
 	* theme and other zsh config
 * .tmux.conf 
+	* modified aesthetics
 	* tpm
 	* tmux-resurrect
 
