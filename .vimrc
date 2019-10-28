@@ -43,9 +43,6 @@ let g:nerdtree_tabs_open_on_console_startup=2    " NERDTree w/ same state in new
 set belloff=all                                  " Turn the annoying bells off
 set showmatch                                    " Highlight closing brackets
 
-""" Remap control+w to control+a
-nnoremap <C-A> <C-W> 
-
 """ Color scheme
 syntax on
 set t_Co=256
