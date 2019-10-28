@@ -33,7 +33,7 @@ fi
 # --- These only install if they're not already present
 
 # vim-plug
-[ "$HOME/.vim/autoload/plug.vim" ] && echo "[*] ~/.vim/autoload/plug.vim found, skipping install..." || curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+[ -f "$HOME/.vim/autoload/plug.vim" ] && echo "[*] ~/.vim/autoload/plug.vim found, skipping install..." || curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
 # Tmux package manager
 [ -d "$HOME/.tmux/plugins/tpm" ] && echo "[*] ~/.tmux/plugins/tpm found, skipping install..." || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
