@@ -1,10 +1,10 @@
 # Dotfiles
 
-> Updates the below resources and installs Vundle (a vim package manager), tpm (tmux package manager), and pyenv & pyenv-virtualenv if they aren't already installed.
+> Updates the below resources and installs vim-plug (a vim package manager), tmux, tpm (tmux package manager), and pyenv & pyenv-virtualenv if they aren't already installed.
 
 ### Resources
 * .vimrc
-	* Vundle
+	* vim-plug
 	* NERDCommenter: (, + c + space) comments out line
 	* NERDTree w/ git integration, tabs, dev icons
 	* Git gutter

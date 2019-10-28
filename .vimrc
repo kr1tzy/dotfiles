@@ -1,30 +1,21 @@
-""" Vundle Settings
-set rtp+=~/.vim/bundle/Vundle.vim                " Runtime path
-set nocompatible                                 " Not compatible w/ Vi
-filetype off                                     " Vundle requirement
+""" Vim-plug plugins
+call plug#begin('~/.vim/plugged')
 
-call vundle#begin()
+Plug 'VundleVim/Vundle.vim'                    " Vundle
+Plug 'scrooloose/nerdcommenter'                " NERDCommenter
+Plug 'scrooloose/nerdtree'                     " NERDTree
+Plug 'Xuyuanp/nerdtree-git-plugin'             " NERDTree Git plugin
+Plug 'jistr/vim-nerdtree-tabs'                 " NERDTree tabs
+Plug 'ryanoasis/vim-devicons'                  " NERDTree Dev icons
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " NERDTree Dev icons colors
+Plug 'airblade/vim-gitgutter'                  " Git gutter
+Plug 'myusuf3/numbers.vim'                     " Numbers
+Plug 'kien/ctrlp.vim'                          " Ctrl+P
+Plug 'bling/vim-airline'                       " Status bar
+Plug 'flazz/vim-colorschemes'                  " All the colorschemes
+Plug 'vim-airline/vim-airline-themes'          " Airline schemes
 
-Plugin 'VundleVim/Vundle'                        " Vundle requirement
-filetype off                                     " Vundle requirement
-
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'                    " Vundle
-Plugin 'scrooloose/nerdcommenter'                " NERDCommenter
-Plugin 'scrooloose/nerdtree'                     " NERDTree
-Plugin 'Xuyuanp/nerdtree-git-plugin'             " NERDTree Git plugin
-Plugin 'jistr/vim-nerdtree-tabs'                 " NERDTree tabs
-Plugin 'ryanoasis/vim-devicons'                  " NERDTree Dev icons
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " NERDTree Dev icons colors
-Plugin 'airblade/vim-gitgutter'                  " Git gutter
-Plugin 'myusuf3/numbers.vim'                     " Numbers
-Plugin 'kien/ctrlp.vim'                          " Ctrl+P
-Plugin 'bling/vim-airline'                       " Status bar
-Plugin 'flazz/vim-colorschemes'                  " All the colorschemes
-Plugin 'vim-airline/vim-airline-themes'          " Airline schemes
-
-call vundle#end()
+call plug#end()
 
 """ Nerd tree
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
