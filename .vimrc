@@ -40,6 +40,11 @@ set ttymouse=xterm2                              " Vim windows adjusted with mou
 set clipboard=unnamed                            " Mac clipboard
 set backspace=indent,eol,start                   " Backspace
 let g:nerdtree_tabs_open_on_console_startup=2    " NERDTree w/ same state in new tab
+set belloff=all                                  " Turn the annoying bells off
+set showmatch                                    " Highlight closing brackets
+
+""" Remap control+w to control+a
+nnoremap <C-A> <C-W> 
 
 """ Color scheme
 syntax on

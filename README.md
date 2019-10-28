@@ -12,7 +12,7 @@
 	* Ctrl+P
 	* Colorschemes
 	* Airline + themes
-* .vimrc.simple
+* .basic.vim
 	* Syntax highlighting
 	* Backspace
 	* Tabs & spaces set
