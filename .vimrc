@@ -1,7 +1,6 @@
 """ Vim-plug plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'VundleVim/Vundle.vim'                    " Vundle
 Plug 'scrooloose/nerdcommenter'                " NERDCommenter
 Plug 'scrooloose/nerdtree'                     " NERDTree
 Plug 'Xuyuanp/nerdtree-git-plugin'             " NERDTree Git plugin
