@@ -6,7 +6,7 @@
 * .vimrc
 	* vim-plug
 	* NERDCommenter: (, + c + space) comments out line
-	* NERDTree w/ git integration, tabs, dev icons
+	* NERDTree w/ git integration, dev icons, custom colors
 	* Git gutter
 	* Numbers
 	* Ctrl+P
