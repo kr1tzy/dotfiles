@@ -3,15 +3,16 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'                     " NERDTree
 Plug 'scrooloose/nerdcommenter'                " NERDCommenter
-Plug 'ryanoasis/vim-devicons'                  " NERDTree Dev icons
+Plug 'jistr/vim-nerdtree-tabs'                 " NERDTree tabs
 Plug 'Xuyuanp/nerdtree-git-plugin'             " NERDTree Git plugin
+Plug 'ryanoasis/vim-devicons'                  " NERDTree Dev icons
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " NERDTree Dev icons colors
 Plug 'airblade/vim-gitgutter'                  " Git gutter
 Plug 'myusuf3/numbers.vim'                     " Numbers
 Plug 'kien/ctrlp.vim'                          " Ctrl+P
 Plug 'bling/vim-airline'                       " Status bar
+Plug 'flazz/vim-colorschemes'                  " Buncha colorschemes 
 Plug 'vim-airline/vim-airline-themes'          " Airline schemes
-Plug 'flazz/vim-colorschemes'                  " All the colorschemes
 
 call plug#end()
 
