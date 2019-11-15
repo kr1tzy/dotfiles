@@ -14,14 +14,14 @@ add_configs () {
 # OS Specific installs
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "[*] Starting Linux install..."
-	# For a non-root user
-	if [ "$(id -u)" != "0" ]; then
-		sudo apt install zsh curl vim tmux git wget unzip -y
-		sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	# For a root user
-	else
+	if [ "$(id -u)" == "0" ]; then
 		apt install zsh curl vim tmux git wget unzip -y
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	# For a non-root user
+	else
+		sudo apt install zsh curl vim tmux git wget unzip -y
+		sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	fi
 	# Hack Nerd Font
 	wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf\?raw\=true -O ./Hack_Nerd_Font.ttf
