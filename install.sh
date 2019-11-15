@@ -31,7 +31,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "[*] Starting Mac install..."
 	brew tap homebrew/cask-fonts
 	brew cask install font-hack-nerd-font
-	brew install zsh
+	brew install zsh tmux
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	echo "[*] Copying config files to home directory..." && cd $dir && add_configs
 else
@@ -40,8 +40,8 @@ fi
 
 # --- These only install if they're not already present
 
-# Vundle
-[ -d "$HOME/.vim/bundle/Vundle.vim" ] && echo "[*] ~/.vim/bundle/Vundle.vim found, skipping install..." || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# vim-plug
+[ -f "$HOME/.vim/autoload/plug.vim" ] && echo "[*] ~/.vim/autoload/plug.vim found, skipping install..." || curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
 # Tmux package manager
 [ -d "$HOME/.tmux/plugins/tpm" ] && echo "[*] ~/.tmux/plugins/tpm found, skipping install..." || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -50,6 +50,6 @@ fi
 [ -d "$HOME/.pyenv" ] && echo "[*] ~/.pyenv found, skipping install..." || curl https://pyenv.run | bash
 
 # Install Vim plugins 
-vim +PluginInstall +smile +sleep3 +qall
+vim +PlugInstall +smile +sleep3 +qall
 
 echo "[*] Install successful! Make sure to change the default font in your terminal to Nerd Hack!"
