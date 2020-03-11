@@ -1,5 +1,7 @@
-#	Path for /bin directories and pyenv
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.pyenv/bin:$PATH
+#	Path update for bin directories
+export PATH=$PATH:/bin/:/usr/bin/:/usr/local/bin/:/sbin/:/usr/sbin/:/usr/local/sbin/:$HOME/.pyenv/bin/
+
+# Pyenv stuff
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 

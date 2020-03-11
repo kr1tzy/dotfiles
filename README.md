@@ -29,7 +29,7 @@
 ### To install
 
 ```bash
-git clone https://github.com/kr1tzb1tz/dotfiles.git && cd dotfiles && ./install.sh
+git clone https://github.com/kr1tzy/dotfiles.git && cd dotfiles && ./install.sh
 ```
 
 [pyenv & pyenv-virtualenv]: https://realpython.com/intro-to-pyenv/
