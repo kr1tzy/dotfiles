@@ -16,7 +16,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "[*] Starting Linux install..."
 	# For a root user
 	if [ "$(id -u)" == "0" ]; then
-		apt install zsh curl vim tmux git wget unzip -y
+		apt install zsh curl vim tmux git wget unzip fc-list -y
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	# For a non-root user
 	else
@@ -38,6 +38,7 @@ else
 	echo "[X] OS is not accounted for in install.sh!"
 fi
 
+# ----------
 # --- These only install if they're not already present
 
 # vim-plug
