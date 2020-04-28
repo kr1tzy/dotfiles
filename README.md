@@ -3,13 +3,13 @@
 > Updates the below resources and installs vim-plug, tmux w/ tpm, zsh & oh-my-zsh, and pyenv & pyenv-virtualenv if they aren't already installed.
 
 ### Resources
-* .basic.tmux.conf 
-* .basic.vim
-* .basic.zshrc
 * .radare2rc
 * .tmux.conf 
+* .tmux.conf.basic
 * .vimrc
+* .vimrc.basic
 * .zshrc
+* .zshrc.basic
 
 ### To install
 

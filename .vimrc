@@ -13,6 +13,8 @@ Plug 'kien/ctrlp.vim'                          " Ctrl+P
 Plug 'bling/vim-airline'                       " Status bar
 Plug 'flazz/vim-colorschemes'                  " Buncha colorschemes 
 Plug 'vim-airline/vim-airline-themes'          " Airline schemes
+Plug 'leafgarland/typescript-vim'              " Typescript syntax
+Plug 'peitalin/vim-jsx-typescript'             " JSX/TSX syntax
 
 call plug#end()
 
@@ -49,3 +51,16 @@ set t_Co=256
 colorscheme mopkai
 hi Normal ctermbg=NONE
 hi Normal guibg=NONE
+
+""" Autocommands
+""" 	1. Remember the last position in each file and jump there when re-opening
+""" 	2. Open Vim with NERDTree 
+""" 	3. Vim cursor in the file opened
+""" 	4. Close Vim if NERDTree is the only window left
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+	au VimEnter * NERDTree
+	au VimEnter * wincmd p
+	au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+endif
+
