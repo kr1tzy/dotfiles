@@ -61,10 +61,12 @@ hi Normal guibg=NONE
 """ 	2. Open Vim with NERDTree 
 """ 	3. Vim cursor in the file opened
 """ 	4. Close Vim if NERDTree is the only window left
+""" 	5. Open NERDTree with each new tab
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 	au VimEnter * NERDTree
 	au VimEnter * wincmd p
 	au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+	au BufWinEnter * NERDTreeMirror
 endif
 
