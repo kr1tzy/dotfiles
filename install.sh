@@ -16,11 +16,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "[*] Starting Linux install..."
 	# For a root user
 	if [ "$(id -u)" == "0" ]; then
-		apt install zsh curl vim tmux git wget unzip -y
+		apt install zsh curl vim tmux git wget unzip bat lsd -y
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	# For a non-root user
 	else
-		sudo apt install zsh curl vim tmux git wget unzip -y
+		sudo apt install zsh curl vim tmux git wget unzip bat lsd -y
 		sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	fi
 	# Hack Nerd Font
@@ -31,7 +31,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "[*] Starting Mac install..."
 	brew tap homebrew/cask-fonts
 	brew cask install font-hack-nerd-font
-	brew install zsh tmux
+	brew install zsh tmux bat lsd
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	echo "[*] Copying config files to home directory..." && cd $dir && add_configs
 else
@@ -50,6 +50,6 @@ fi
 [ -d "$HOME/.pyenv" ] && echo "[*] ~/.pyenv found, skipping install..." || curl https://pyenv.run | bash
 
 # Install Vim plugins 
-vim +PlugInstall +smile +sleep3 +qall
+vim +PlugInstall +smile +sleep1 +qall
 
 echo "[*] Install successful! Make sure to change the default font in your terminal to Nerd Hack!"

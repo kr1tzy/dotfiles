@@ -11,7 +11,7 @@ Plug 'airblade/vim-gitgutter'                  " Git gutter
 Plug 'myusuf3/numbers.vim'                     " Numbers
 Plug 'kien/ctrlp.vim'                          " Ctrl+P
 Plug 'bling/vim-airline'                       " Status bar
-Plug 'flazz/vim-colorschemes'                  " Buncha colorschemes 
+Plug 'flazz/vim-colorschemes'                  " Buncho colorschemes 
 Plug 'vim-airline/vim-airline-themes'          " Airline schemes
 
 call plug#end()
