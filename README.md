@@ -1,30 +1,15 @@
 # Dotfiles
 
-> Updates the below resources and installs vim-plug (a vim package manager), tmux, tpm (tmux package manager), and pyenv & pyenv-virtualenv if they aren't already installed.
+> Updates the below resources and installs vim-plug, tmux w/ tpm, zsh & oh-my-zsh, and pyenv & pyenv-virtualenv if they aren't already installed.
 
 ### Resources
-* .vimrc
-	* vim-plug
-	* NERDCommenter: (, + c + space) comments out line
-	* NERDTree w/ git integration, dev icons, tabs
-	* Git gutter
-	* Numbers
-	* Ctrl+P
-	* Colorschemes
-	* Airline + themes
-* .basic.vim
-	* Syntax highlighting
-	* Backspace
-	* Tabs & spaces set
-	* NO PLUGINS
 * .radare2rc
-	* colors & number of bytes displayed in disassembly
-* .zshrc
-	* theme and other zsh config
 * .tmux.conf 
-	* modified aesthetics
-	* tpm
-	* tmux-resurrect
+* .tmux.conf.basic
+* .vimrc
+* .vimrc.basic
+* .zshrc
+* .zshrc.basic
 
 ### To install
 
