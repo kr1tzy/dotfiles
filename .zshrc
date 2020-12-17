@@ -1,16 +1,7 @@
-#	Path updates
+# Path updates
 export PATH=$PATH:/bin/:/usr/bin/:/usr/local/bin/:/sbin/:/usr/sbin/:/usr/local/sbin/
-export PATH=$PATH:/Applications/Ghidra.app/Contents/MacOS/ghidra_9.2_PUBLIC
+export PATH=$PATH:/home/kritz/Playground/ghidra_9.1.2
 export PATH=$PATH:$HOME/.pyenv/bin/
-
-# OS dependent
-if [[ `uname` == "Darwin" ]]; then
-	export PATH=$PATH:/Applications/Ghidra.app/Contents/MacOS/ghidra_9.2_PUBLIC
-elif command apt > /dev/null; then
-	export PATH=$PATH:$HOME/Playground/ghidra_9.2_PUBLIC
-else
-    echo 'Unknown OS!'
-fi
 
 # Path to your oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
