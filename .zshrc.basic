@@ -11,4 +11,7 @@ ZSH_THEME="clean"
 source $ZSH/oh-my-zsh.sh
 
 # Any plugins
-plugins=(git)
+plugins=(
+    git, 
+    tmux
+)

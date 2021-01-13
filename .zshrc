@@ -1,17 +1,14 @@
 # Path updates
 export PATH=$PATH:/bin/:/usr/bin/:/usr/local/bin/:/sbin/:/usr/sbin/:/usr/local/sbin/
-export PATH=$PATH:/home/kritz/Playground/ghidra_9.1.2
-export PATH=$PATH:$HOME/.pyenv/bin/
 
-# Path to your oh-my-zsh
+# oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
-
-# Pyenv stuff
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # Zsh theme
 ZSH_THEME="clean"
+
+# pipenv
+PIPENV_VENV_IN_PROJECT=true
 
 # Aliases
 alias ls="lsd"
@@ -25,4 +22,8 @@ alias lt="ls --tree"
 source $ZSH/oh-my-zsh.sh
 
 # Any plugins
-plugins=(git)
+plugins=(
+    git, 
+    tmux, 
+    pyenv
+)
