@@ -1,19 +1,19 @@
 # dotfiles
 
-> Updates the below resources (no .basic) and installs vim-plug, tmux w/ tpm, zsh w/ oh-my-zsh, and pyenv if they're not installed.
+> My daily drivers for macOS & Linux.
 
-### Resources
+## Resources
 * .tmux.conf 
-* .tmux.conf.basic
 * .vimrc
-* .vimrc.basic
 * .zshrc
+
+### Basic versions (no package managers or other fluff)
+* .tmux.conf.basic
+* .vimrc.basic
 * .zshrc.basic
 
-### To install
+## To install
 
 ```bash
 git clone https://github.com/kr1tzy/dotfiles.git && cd dotfiles && ./install.sh
 ```
-
-[pyenv]: https://realpython.com/intro-to-pyenv/
