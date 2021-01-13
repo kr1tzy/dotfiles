@@ -1,5 +1,7 @@
 # Path updates
 export PATH=$PATH:/bin/:/usr/bin/:/usr/local/bin/:/sbin/:/usr/sbin/:/usr/local/sbin/
+export PYENV_ROOT="$HOME/.pyenv"
+PATH="$PYENV_ROOT/bin:$PATH"
 
 # oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
