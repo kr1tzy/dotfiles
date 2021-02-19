@@ -60,19 +60,11 @@ add_configs () {
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "[*] Starting Linux install..."
 
-	# For a root user
-	if [ "$(id -u)" == "0" ]; then
-		apt install zsh curl vim tmux git wget unzip bat lsd nodejs -y
-        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-	# For a non-root user
-	else
-		sudo apt install zsh curl vim tmux git wget unzip bat lsd nodejs -y
-        sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-	fi
+    sudo apt install zsh curl vim tmux git wget unzip nodejs -y
+    sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 	# Hack Nerd Font
 	wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf\?raw\=true -O ./Hack_Nerd_Font.ttf
-	mv ./Hack_Nerd_Font.ttf ~/.local/share/fonts/ && rm ./Hack_Nerd_Font.ttf
 
 	echo "[*] Copying config files to $HOME" && cd $CURRENT_DIR && add_configs
 elif [[ "$OSTYPE" == "darwin"* ]]; then
