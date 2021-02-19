@@ -66,6 +66,8 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	# Hack Nerd Font
 	wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf\?raw\=true -O ./Hack_Nerd_Font.ttf
 
+    echo "[*] Remember to install the 'Hack_Nerd_Font.ttf' to your system"
+
 	echo "[*] Copying config files to $HOME" && cd $CURRENT_DIR && add_configs
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "[*] Starting Mac install..."
