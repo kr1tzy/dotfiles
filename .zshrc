@@ -1,4 +1,4 @@
-# Path update
+# path updates
 export PATH=$PATH:/bin/:/usr/bin/:/usr/local/bin/:/sbin/:/usr/sbin/:/usr/local/sbin/
 
 # configs
@@ -9,8 +9,9 @@ export ZSH=$HOME/.oh-my-zsh
 
 # custom aliases
 alias play="cd ~/Playground"
-alias cat="bat"
-alias ls="lsd"
+#alias cat="bat"
+#alias cat="batcat"
+#alias ls="lsd"
 alias l="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
