@@ -1,8 +1,6 @@
 #!/bin/bash
 
-
 CURRENT_DIR=$(pwd)
-
 
 # ----------------------------------------------------
 # --- Installs program if it's not available via brew.
@@ -60,14 +58,13 @@ add_configs () {
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "[*] Starting Linux install..."
 
-    sudo apt install zsh curl vim tmux git wget unzip nodejs -y
+    sudo apt install vim tmux zsh git curl wget unzip nodejs -y
     sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 	# Hack Nerd Font
 	wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf\?raw\=true -O ./Hack_Nerd_Font.ttf
 
     echo "[*] Remember to install the 'Hack_Nerd_Font.ttf' to your system"
-
 	echo "[*] Copying config files to $HOME" && cd $CURRENT_DIR && add_configs
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "[*] Starting Mac install..."
