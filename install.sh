@@ -69,7 +69,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "[*] Starting Mac install..."
     which -s brew
     if [[ $? != 0 ]] ; then
-        echo '[!] First install Homebrew: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' && exit
+	    echo "[*] Installing brew..."
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     else
         brew update
     fi
