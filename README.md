@@ -6,6 +6,7 @@
 * .tmux.conf 
 * .vimrc
 * .zshrc
+* .zprofile
 
 ### Basic versions (no package managers or other fluff)
 * .tmux.conf.basic

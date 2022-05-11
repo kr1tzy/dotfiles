@@ -67,6 +67,13 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo "[*] Click the 'Hack_Nerd_Font.ttf' to install it to your system"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "[*] Starting Mac install..."
+    which -s brew
+    if [[ $? != 0 ]] ; then
+        # Install Homebrew
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    else
+        brew update
+    fi
 
     if brew tap | grep homebrew/cask-fonts > /dev/null; then
         echo "[*] homebrew/cask-fonts found; skipping tap!"
@@ -86,6 +93,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     fi
 
 	echo "[*] Copying config files to $HOME" && cd $CURRENT_DIR && add_configs
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 else
 	echo "[!] OS not accounted for in install.sh!"
 fi
