@@ -29,13 +29,15 @@ plugins=(
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Sets prompt w/ venv name
+# Sets the prompt with venv name
 DEFAULT_PROMPT=$PROMPT
 
 function cd() {
   builtin cd "$@"
 
-  if [[ -n "$VIRTUAL_ENV" ]] ; then
+  if [[ -n "$VIRTUAL_ENV_PROMPT" ]] ; then
+      PROMPT="$VIRTUAL_ENV_PROMPT$DEFAULT_PROMPT"
+  elif [[ -n "$VIRTUAL_ENV" ]] ; then
       PROMPT="(`basename $VIRTUAL_ENV`) $DEFAULT_PROMPT"
   else
       PROMPT=$DEFAULT_PROMPT

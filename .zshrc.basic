@@ -13,11 +13,13 @@ alias lla="ls -la"
 alias lt="ls --tree"
 alias lr="ls -r"
 
-# Sets prompt w/ venv name
+# Sets the prompt with venv name
 function cd() {
   builtin cd "$@"
 
-  if [[ -n "$VIRTUAL_ENV" ]] ; then
+  if [[ -n "$VIRTUAL_ENV_PROMPT" ]] ; then
+      PROMPT="$VIRTUAL_ENV_PROMPT$DEFAULT_PROMPT"
+  elif [[ -n "$VIRTUAL_ENV" ]] ; then
       PROMPT="(`basename $VIRTUAL_ENV`) $DEFAULT_PROMPT"
   else
       PROMPT=$DEFAULT_PROMPT
