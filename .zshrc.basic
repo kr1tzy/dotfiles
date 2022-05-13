@@ -1,13 +1,25 @@
-#path
+# Path
 export PATH=$PATH:/bin/:/usr/bin/:/usr/local/bin/:/sbin/:/usr/sbin/:/usr/local/sbin/
 
-#configs
+# Configs
 PROMPT='%F{208}%n%f:%F{226}%~%f $ '
+DEFAULT_PROMPT=$PROMPT
 
-# custom aliases
+# Aliases
 alias play="cd ~/Playground"
 alias l="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
 alias lt="ls --tree"
 alias lr="ls -r"
+
+# Sets prompt w/ venv name
+function cd() {
+  builtin cd "$@"
+
+  if [[ -n "$VIRTUAL_ENV" ]] ; then
+      PROMPT="(`basename $VIRTUAL_ENV`) $DEFAULT_PROMPT"
+  else
+      PROMPT=$DEFAULT_PROMPT
+  fi
+}

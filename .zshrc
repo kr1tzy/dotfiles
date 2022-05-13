@@ -29,7 +29,7 @@ plugins=(
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Sets oh-my-zsh prompt w/ venv name
+# Sets prompt w/ venv name
 DEFAULT_PROMPT=$PROMPT
 
 function cd() {
