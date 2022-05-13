@@ -2,10 +2,8 @@
 export PATH=$PATH:/bin/:/usr/bin/:/usr/local/bin/:/sbin/:/usr/sbin/:/usr/local/sbin/
 
 # configs
-ZSH_THEME="clean"
 COMPLETION_WAITING_DOTS="true"
-export ZSH=$HOME/.oh-my-zsh
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+ZSH_THEME="clean"
 
 # custom aliases
 alias play="cd ~/Playground"
@@ -21,4 +19,18 @@ plugins=(
     pyenv
 )
 
+export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# Sets the prompt with venv name
+DEFAULT_PROMPT=$PROMPT
+
+function cd() {
+  builtin cd "$@"
+
+  if [[ -n "$VIRTUAL_ENV" ]] ; then
+      PROMPT="(`basename $VIRTUAL_ENV`) $DEFAULT_PROMPT"
+  else
+      PROMPT=$DEFAULT_PROMPT
+  fi
+}
