@@ -12,6 +12,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'myusuf3/numbers.vim'                        
 Plug 'bling/vim-airline'                          
 Plug 'flazz/vim-colorschemes'                     
+Plug 'frazrepo/vim-rainbow'
 Plug 'vim-airline/vim-airline-themes'             
 Plug 'leafgarland/typescript-vim'                 
 Plug 'peitalin/vim-jsx-typescript'                
@@ -27,9 +28,10 @@ set t_Co=256
 colorscheme mopkai
 hi Normal ctermbg=NONE
 hi Normal guibg=NONE
+let g:rainbow_active = 1
 
 """ Ale
-let g:ale_linters = { 'python': ['pylint'], 'javascript': ['eslint'] }
+let g:ale_linters = { 'python': ['pylint', 'mypy'], 'javascript': ['eslint'] }
 let g:ale_fixers = { 'python': ['black'], 'javascript': ['prettier'] }
 let b:ale_warn_about_trailing_whitespace = 0
 
@@ -48,10 +50,11 @@ let g:pymode_virtualenv=1
 let mapleader=","                                   
 map ,w <C-w>
 map ,n :NERDTreeToggle <CR>
-set shiftwidth=4                                    
-set tabstop=4                                       
-set textwidth=79
+set shiftwidth=4 
+set tabstop=8
+set softtabstop=0
 set expandtab                                       
+set smarttab
 set autoindent
 set fileformat=unix
 set number                                          
