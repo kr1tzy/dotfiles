@@ -4,14 +4,14 @@ export PATH=$PATH:/bin/:/usr/bin/:/usr/local/bin/:/sbin/:/usr/sbin/:/usr/local/s
 # Configs
 ZSH_THEME="clean"
 COMPLETION_WAITING_DOTS="true"
-export NVM_DIR="$HOME/.nvm"
+#export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Aliases
 alias play="cd ~/Playground"
 alias binja="cd ~/Library/Application\ Support/Binary\ Ninja/"
-#alias cat="batcat"
+#alias cat="bat"
 #alias ls="lsd"
 alias l="ls -l"
 alias la="ls -a"
