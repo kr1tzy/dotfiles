@@ -12,28 +12,38 @@ Plug 'tpope/vim-fugitive'
 Plug 'myusuf3/numbers.vim'                        
 Plug 'bling/vim-airline'                          
 Plug 'flazz/vim-colorschemes'                     
+Plug 'vim-python/python-syntax'
 Plug 'frazrepo/vim-rainbow'
 Plug 'vim-airline/vim-airline-themes'             
 Plug 'leafgarland/typescript-vim'                 
 Plug 'peitalin/vim-jsx-typescript'                
 Plug 'natebosch/vim-lsc'                          
 Plug 'neoclide/coc.nvim', {'branch': 'release'}   
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
 """ Theme
-syntax on
 set t_Co=256
-colorscheme mopkai
+syntax enable
+filetype plugin on                                  
 hi Normal ctermbg=NONE
 hi Normal guibg=NONE
+colorscheme flattown
 let g:rainbow_active = 1
 
 """ Ale
 let g:ale_linters = { 'python': ['pylint', 'mypy'], 'javascript': ['eslint'] }
-let g:ale_fixers = { 'python': ['black'], 'javascript': ['prettier'] }
-let b:ale_warn_about_trailing_whitespace = 0
+let g:ale_fixers = { 
+\       'python': ['black'], 
+\       'html': ['prettier'], 
+\       'css': ['prettier'], 
+\       'javascript': ['prettier'], 
+\       'typescript': ['prettier'], 
+\       'json': ['prettier']
+\}
+let g:ale_warn_about_trailing_whitespace = 0
+let g:ale_fix_on_save = 1
 
 """ Nerd tree
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
@@ -45,7 +55,7 @@ let g:nerdtree_tabs_open_on_console_startup=2
 let NERDTreeShowHidden=1
 
 """ Other
-filetype plugin on                                  
+let g:python_highlight_all = 1
 let g:pymode_virtualenv=1                         
 let mapleader=","                                   
 map ,w <C-w>
