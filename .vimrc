@@ -18,7 +18,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'leafgarland/typescript-vim'                 
 Plug 'peitalin/vim-jsx-typescript'                
 Plug 'natebosch/vim-lsc'                          
-Plug 'neoclide/coc.nvim', {'branch': 'release'}   
 Plug 'dense-analysis/ale'
 
 call plug#end()
@@ -29,7 +28,7 @@ syntax enable
 filetype plugin on                                  
 hi Normal ctermbg=NONE
 hi Normal guibg=NONE
-colorscheme flattown
+colorscheme CodeFactoryV3
 let g:rainbow_active = 1
 
 """ Ale
