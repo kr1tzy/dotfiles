@@ -25,3 +25,8 @@ function cd() {
       PROMPT=$DEFAULT_PROMPT
   fi
 }
+
+# Find & delete .swp files w/ confirmation
+function swp_smash() {
+    find . -name "*.swp" -exec rm -i {} \;
+}

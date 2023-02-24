@@ -11,8 +11,8 @@ COMPLETION_WAITING_DOTS="true"
 # Aliases
 alias play="cd ~/Playground"
 alias binja="cd ~/Library/Application\ Support/Binary\ Ninja/"
-#alias cat="bat"
-#alias ls="lsd"
+alias cat="bat"
+alias ls="lsd"
 alias l="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
@@ -42,4 +42,9 @@ function cd() {
   else
       PROMPT=$DEFAULT_PROMPT
   fi
+}
+
+# Find & delete .swp files w/ confirmation
+function swp_smash() {
+    find . -name "*.swp" -exec rm -i {} \;
 }
