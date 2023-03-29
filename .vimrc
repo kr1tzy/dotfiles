@@ -37,6 +37,7 @@ set smartindent
 set fileformat=unix
 set ttymouse=xterm2                                 
 set clipboard=unnamed                               
+set backspace=indent,eol,start
 set belloff=all                                     
 set showmatch
 set mouse=a
