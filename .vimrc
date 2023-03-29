@@ -27,6 +27,7 @@ filetype plugin indent on
 colorscheme CodeFactoryV3
 map ,n :NERDTreeToggle <CR>
 map ,f :Files <CR>
+map ,t :Tags <CR>
 map ,r :Rg <CR>
 map ,w <C-w>
 set shiftwidth=4 
@@ -44,6 +45,7 @@ set mouse=a
 let mapleader=","                                   
 let g:rainbow_active=1
 let g:fzf_action={ 'enter': 'tab split' }
+let g:fzf_tags_command = '/opt/homebrew/bin/ctags -R'
 let g:WebDevIconsNerdTreeAfterGlyphPadding='  '
 let g:WebDevIconsUnicodeGlyphDoubleWidth=1
 let g:WebDevIconsUnicodeDecorateFolderNodes=1
