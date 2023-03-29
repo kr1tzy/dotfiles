@@ -36,10 +36,11 @@ alias l="ls -la"
 # Functions
 #
 
+DEFAULT_PROMPT=$PROMPT
+
 # Wrapper to check for a venv & display the name
 function cd() {
     builtin cd "$@"
-    DEFAULT_PROMPT=$PROMPT
     if [[ -n "$VIRTUAL_ENV_PROMPT" ]] ; then
         PROMPT="$VIRTUAL_ENV_PROMPT$DEFAULT_PROMPT"
     elif [[ -n "$VIRTUAL_ENV" ]] ; then
