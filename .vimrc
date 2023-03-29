@@ -27,6 +27,7 @@ filetype plugin indent on
 colorscheme CodeFactoryV3
 map ,n :NERDTreeToggle <CR>
 map ,f :Files <CR>
+map ,r :Rg <CR>
 map ,w <C-w>
 set shiftwidth=4 
 set tabstop=4
