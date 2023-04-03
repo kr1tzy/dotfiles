@@ -74,8 +74,4 @@ let g:ale_fixers = {
 if has("autocmd")
     " Remember the last position in each file
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-    " Close the tab if NERDTree is the only window remaining in it.
-    au BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-    " Open the existing NERDTree on each new tab.
-    au BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 endif
