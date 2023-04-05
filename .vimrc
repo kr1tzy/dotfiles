@@ -26,6 +26,7 @@ syntax on
 filetype plugin indent on                                  
 colorscheme CodeFactoryV3
 map ,n :NERDTreeToggle <CR>
+map ,a :ALEToggle <CR>
 map ,f :Files <CR>
 map ,r :Rg <CR>
 map ,w <C-w>
