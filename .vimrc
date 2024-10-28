@@ -4,7 +4,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'                  
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'                    
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'                     
 Plug 'tpope/vim-fugitive'
@@ -28,6 +27,7 @@ colorscheme CodeFactoryV3
 map ,n :NERDTreeToggle <CR>
 map ,a :ALEToggle <CR>
 map ,f :Files <CR>
+map ,t :Tags <CR>
 map ,r :Rg <CR>
 map ,w <C-w>
 set shiftwidth=4 
@@ -45,6 +45,7 @@ set mouse=a
 let mapleader=","                                   
 let g:rainbow_active=1
 let g:fzf_action={ 'enter': 'tab split' }
+let g:fzf_tags_command='/opt/homebrew/bin/ctags -R'
 let g:WebDevIconsNerdTreeAfterGlyphPadding='  '
 let g:WebDevIconsUnicodeGlyphDoubleWidth=1
 let g:WebDevIconsUnicodeDecorateFolderNodes=1
@@ -75,4 +76,13 @@ let g:ale_fixers = {
 if has("autocmd")
     " Remember the last position in each file
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    " Open the existing NERDTree on each new tab.
+    au BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
+    " Exit Vim if NERDTree is the only window remaining in the only tab.
+    au BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
+    " Close the tab if NERDTree is the only window remaining in it.
+    autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
+    " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+    au BufEnter * if winnr() == winnr('h') && bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+        \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 endif
