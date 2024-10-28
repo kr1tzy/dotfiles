@@ -28,8 +28,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias play="cd ~/Playground"
 alias binja="cd ~/Library/Application\ Support/Binary\ Ninja/"
-alias cat="bat"
-alias ls="lsd"
 alias l="ls -la"
 
 # 
